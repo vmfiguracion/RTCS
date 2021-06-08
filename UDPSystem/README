@@ -1,0 +1,18 @@
+README
+
+SYSC 3303 - Assignment 2
+
+Client.java - Invokes one of the main methods of the project. Will send requests to the IntermediateHost class
+			  and receives acknowledgement packets from the IntermediateHost class. 
+
+IntermediateHost.java - Invokes one of the main methods of the project. Will receive packets from both Client.java
+						and Server.java. Will forward the data from one of the java classes to the other. ie If the
+						packet came from the Client.java class then it will forward that packet to the Server.java
+						class and vice versa.
+
+Server.java - Invokes one of the main methods of the project. Receives packets from the IntermediateHost class and form
+			  an acknowledgement packet to be sent to the Client.java class. Acknowledgements are different depending on
+			  the request (ie read request or write request). The server will stop if an invalid request has been sent.
+
+Setup: Make sure that there are three different consoles. Run each class separately with the Server.java class first, 
+	   then the IntermediateHost.java, and then lastly the Client.java.
